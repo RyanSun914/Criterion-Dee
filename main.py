@@ -1,5 +1,7 @@
 #Calculate the size price
 repeat = 0
+finalPrice = 0
+fina
 
 while repeat == 0:
   pSize = input('Medium/Large/Jumbo: ').title()
@@ -15,17 +17,18 @@ while repeat == 0:
     print("Jumbo")
     pizzaPrice = float(18.29)
     toppingPrice = float(3.19)
-
 #Calculate number of toppings
 
-  toppings = input("Please enter your toppings (seperated by a comma) ")
+  toppings = input("Please enter your toppings (seperated by a comma):  ")
   toppingList  = toppings.split()
   totalTopping = int(len (toppingList))
- 
+  finalPrice1 = totalTopping * toppingPrice + pizzaPrice
+  finalPrice = finalPrice1 + finalPrice
 
 #Want another one?
 
   orderAgain = input("Thank you! Would you like to order another pizza? (Y/N)").title()
   if (orderAgain) == "N":
     repeat = 1
-    
+    print("The final price is: ", totalTopping * toppingPrice + pizzaPrice, "!")
+  finalPrice = totalTopping*toppingPrice + pizzaPrice
